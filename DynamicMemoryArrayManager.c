@@ -37,7 +37,7 @@ int main(){
     if (buffer.size == 0) return 0;
     
     double sum = 0;
-    for (int i = 0; i < buffer.size; i++); sum += buffer.data[i];
+    for (int i = 0; i < buffer.size; i++); sum += buffer.data[i]
     double mean = sum / buffer.size;
 
     printf("\n---results ---\n");
