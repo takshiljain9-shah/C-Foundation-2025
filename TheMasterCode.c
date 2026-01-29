@@ -36,4 +36,34 @@ void factorize(int n){
             n /= i;
         }
     }
+    if (n > 2) printf("%d ", n);
+    printf("\n");
+}
+
+//FILE I/O: saving a state to a permanent file
+void save_tasks(TaskBuffer *tb){
+    FILE *file = fopen("engineering_log.txt", "w");
+    if (file == NULL) return;
+
+    for (int i = 0; i < tb-> count; i++){
+        fprintf(file, "%d,%s,%d\n", tb->tasks[i].id, tb->tasks[i].title, tb->tasks[i].complexity_score);
+    }
+    fclose(file);
+    printf("[system] Data successsfully committed to enginnering_log.txt\n");
+}
+
+int main(){
+    TaskBuffer tb;
+    init_buffer(&tb);
+    char input_title[50];
+    int input_score;
+
+    printf("---TECH COMMAND CENTRE ---\n");
+
+    while(1){
+        printf("\nEnter task title (or 'exit' to finish): ");
+        scanf("%s", input_title);
+
+        if
+    }
 }
