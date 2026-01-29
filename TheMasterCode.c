@@ -22,3 +22,18 @@ void init_buffer(TaskBuffer *tb){
     tb->capacity = 2;
     tb->tasks = (TechTask *)malloc*(tb->capacity * sizeof(TechTask));
 }
+
+//Initialize the dynamic buffer
+void factorize(int n){
+    printf("Factors of %d: ", n);
+    while(n % 2 == 0){
+        printf("%d ", 2);
+        n /= 2;
+    }
+    for(int i = 3; i * i <= n; i += 2){
+        while (n % i == 0){
+            printf("%d ", i);
+            n /= i;
+        }
+    }
+}
